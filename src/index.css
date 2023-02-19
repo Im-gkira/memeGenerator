@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: hsla(11, 82%, 87%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(11, 82%, 87%, 1) 0%,
+    hsla(299, 85%, 90%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(11, 82%, 87%, 1) 0%,
+    hsla(299, 85%, 90%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(11, 82%, 87%, 1) 0%,
+    hsla(299, 85%, 90%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9CDC3", endColorstr="#FACEFB", GradientType=1 );
+  padding: 12px 30px;
+  color: black;
+  margin-bottom: 5vh;
+}
+
+.header--left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header--left > img {
+  max-width: 8vh;
+}
+
+.header--left > h1 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.header > h3 {
+  font-size: 18px;
+  font-family: 400;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.input--box {
+  width: 80%;
+  padding: 5px 0px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+input {
+  font-size: 26px;
+  width: 100%;
+  padding: 10px 0px;
+  margin: 0px;
+  border-radius: 6px;
+}
+
+.btn {
+  font-size: 20px;
+  background: hsla(11, 82%, 87%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(11, 82%, 87%, 1) 0%,
+    hsla(299, 85%, 90%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(11, 82%, 87%, 1) 0%,
+    hsla(299, 85%, 90%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(11, 82%, 87%, 1) 0%,
+    hsla(299, 85%, 90%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9CDC3", endColorstr="#FACEFB", GradientType=1 );
+  color: black;
+  border-style: solid;
+  border: 2px solid brown;
+  border-radius: 6px;
+  padding: 15px 20px;
+  width: 80%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.meme--img{
+  width: 80%;
+  text-align: center;
+  border: 2px solid brown;
+  border-radius: 6px;
+}
+.meme--img>img{
+  min-height: 55vh;
+  max-height: 55vh;
+}
