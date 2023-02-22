@@ -1,20 +1,22 @@
 import React from "react";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 export default function Meme() {
   const [allMemeData, setMemeData] = useState([]);
-   $.ajax("https://api.imgflip.com/get_memes").done(function (data) {setMemeData(data);});
 
-   function getImage(){
-    const allMemeImages = allMemeData.data.memes
-    const randomInt = Math.floor(Math.random()* (allMemeImages.length-1))
+  useEffect(function () {
+    $.ajax("https://api.imgflip.com/get_memes").done(function (data) {
+      setMemeData(data);
+    });
+  }, []);
+
+  function getImage() {
+    const allMemeImages = allMemeData.data.memes;
+    const randomInt = Math.floor(Math.random() * (allMemeImages.length - 1));
     setImgURL(allMemeImages[randomInt].url);
-   }
+  }
 
-   const [imgURL,setImgURL] = useState("")
-
-
+  const [imgURL, setImgURL] = useState("");
 
   return (
     <form className="form">
@@ -27,9 +29,7 @@ export default function Meme() {
         Get a new meme image 🖼
       </div>
 
-      <div className="meme--img">
-        {imgURL && <img src={imgURL}></img>}
-      </div>
+      <div className="meme--img">{imgURL && <img src={imgURL}></img>}</div>
     </form>
   );
 }
